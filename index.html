@@ -7,12 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="video-message">Carregando vídeo... Se não aparecer, verifique se o arquivo está na pasta correta.</div>
-    
-    <video autoplay loop muted playsinline id="background-video">
-        <source src="MuiGoku.mp4" type="video/mp4">
-        Seu navegador não suporta vídeos HTML5.
-    </video>
+    <div class="video-background">
+        <iframe src="https://www.youtube.com/embed/Iy5R5_T243w?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=Iy5R5_T243w&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     
     <div class="calculator">
         <div class="display">0</div>
@@ -44,19 +41,5 @@
     </div>
 
     <script src="script.js"></script>
-    <script>
-        // Verifica se o vídeo carregou
-        const video = document.getElementById('background-video');
-        const message = document.getElementById('video-message');
-        
-        video.addEventListener('loadeddata', function() {
-            message.style.display = 'none';
-        });
-        
-        video.addEventListener('error', function() {
-            message.innerHTML = 'Erro ao carregar o vídeo. Por favor, copie o arquivo "Mui Goku live wallpaper 4K by motion graphics en koncepto.mp4" para esta pasta e renomeie para "MuiGoku.mp4".';
-            message.style.color = 'red';
-        });
-    </script>
 </body>
 </html>
